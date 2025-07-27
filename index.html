@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+            color: #334155; /* Darker text color */
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            height: 4px;
+            background-color: #3b82f6; /* Blue accent */
+            border-radius: 9999px;
+        }
+        /* No custom scrollbar styles needed for grid layout */
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md py-4 px-6 md:px-12 lg:px-24">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800 rounded-md p-2 hover:bg-gray-100 transition-colors">A.M.Selvaganesh</a>
+            <ul class="flex space-x-6">
+                <li><a href="#about" class="text-gray-600 hover:text-blue-600 font-medium transition-colors rounded-md p-2 hover:bg-gray-100">About</a></li>
+                <li><a href="#skills" class="text-gray-600 hover:text-blue-600 font-medium transition-colors rounded-md p-2 hover:bg-gray-100">Skills</a></li>
+                <li><a href="#projects" class="text-gray-600 hover:text-blue-600 font-medium transition-colors rounded-md p-2 hover:bg-gray-100">Projects</a></li>
+                <li><a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium transition-colors rounded-md p-2 hover:bg-gray-100">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-20 px-6 md:px-12 lg:px-24 text-center rounded-b-lg shadow-lg">
+        <div class="container mx-auto">
+            <img src="https://placehold.co/150x150/ffffff/3b82f6?text=AMS" alt="Profile Picture" class="w-36 h-36 rounded-full mx-auto mb-6 border-4 border-white shadow-lg">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Hi, I'm <span class="text-yellow-300">A.M.Selvaganesh</span>!</h1>
+            <p class="text-xl md:text-2xl mb-8 font-light">A passionate <span class="font-semibold">Robotics Engineer & Web Developer</span> building amazing things.</p>
+            <a href="#projects" class="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 inline-block">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-6 md:px-12 lg:px-24 bg-white rounded-lg shadow-md mx-4 md:mx-auto max-w-8xl mt-8">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center section-title">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                <div class="md:w-1/3 mb-6 md:mb-0">
+                    <img src="https://placehold.co/300x300/e0e7ff/3b82f6?text=About+Image" alt="About Me" class="rounded-lg shadow-md w-full h-auto object-cover">
+                </div>
+                <div class="md:w-2/3 text-lg text-gray-700 leading-relaxed">
+                    <p class="mb-4">My work involves a crazy combination of robotics, web development, and AI automations! My journey began with the movie "Enthiran," where I was captivated by robots. That's when I set my goal: to become a robotic scientist and create humanoid robots and other types.</p>
+                    <p class="mb-4">I took my first step in sixth standard, learning IoT and doing basic projects. In eighth, I learned to simulate materials and parts in 2D and 3D using software like AutoCAD and Solidworks. After a four-year break during high school, my goal reignited in college, where I delved into AI and web development, leading me to where I am now.</p>
+                    <p>My hobbies include reading novels, making crafts, and watching thriller movies. I truly love solving complex and interesting problems, whether in math, real life, or through programming.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 px-6 md:px-12 lg:px-24 bg-gray-50 rounded-lg shadow-md mx-4 md:mx-auto max-w-6xl mt-8">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center section-title">My Skills</h2>
+
+            <!-- Domain Dropdown -->
+            <div class="flex justify-center mb-8">
+                <label for="skill-domain" class="sr-only">Select Skill Domain</label>
+                <select id="skill-domain" class="block w-full md:w-1/2 lg:w-1/3 p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-lg">
+                    <option value="all">All Domains</option>
+                    <option value="programming_languages">Programming Languages</option>
+                    <option value="ml_data_science">ML & Data Science</option>
+                    <option value="embedded_systems">Embedded Systems</option>
+                    <option value="frameworks">Frameworks</option>
+                    <option value="design_simulation">Design and Simulation Tools</option>
+                    <option value="operating_systems">Operating Systems</option>
+                    <option value="soft_skills">Soft Skills</option>
+                    <option value="languages_known">Languages Known</option>
+                </select>
+            </div>
+
+            <!-- Skills Display Container -->
+            <div id="skills-display" class="grid grid-cols-1 gap-6">
+                <!-- Skill domains and skills will be injected here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-6 md:px-12 lg:px-24 bg-white rounded-lg shadow-md mx-4 md:mx-auto max-w-8xl mt-8">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center section-title">My Projects</h2>
+            <!-- Projects Container with Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project Card 1: MIRA - MS Digitech Intelligent Robotic Assistant -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden flex hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-1/3 bg-blue-500 text-white p-4 flex items-center justify-center rounded-l-lg">
+                        <h3 class="text-lg font-bold text-center">MIRA <br> (MS Digitech)</h3>
+                    </div>
+                    <div class="w-2/3 p-4 bg-gray-100 rounded-r-lg">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-1">MIRA - MS Digitech Intelligent Robotic Assistant</h4>
+                        <p class="text-gray-600 text-xs mb-2">May 2025 - Present</p>
+                        <p class="text-gray-700 text-sm mb-2">Built an AI automated workflow which automates the trading division of the company MS Digitech Automation company. This helped them a lot by reducing their manpower in trading divison by 60 percent since the remaining 40 percent are required in transportation.</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded-full">Python</span>
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-0.5 rounded-full">JReact</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2 py-0.5 rounded-full">Node.js</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2 py-0.5 rounded-full">n8n</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Factory Monitoring System -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden flex hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-1/3 bg-blue-500 text-white p-4 flex items-center justify-center rounded-l-lg">
+                        <h3 class="text-lg font-bold text-center">Factory Monitoring</h3>
+                    </div>
+                    <div class="w-2/3 p-4 bg-gray-100 rounded-r-lg">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-1">Factory Monitoring System</h4>
+                        <p class="text-gray-600 text-xs mb-2">Aug - Dec 2024</p>
+                        <p class="text-gray-700 text-sm mb-2">Built an application for Schaeffler which helps in tracking the number of products produced based on weight and to store the data in cloud so that it can be accessed throughout the globe. Designed an intuitive dashboard to present production data through interactive visualizations, including graphs, in multiple formats. The application also contains security features like fingerprint scanner and RFID identity cards to prevent data leaks.</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded-full">Python</span>
+                            <span class="bg-red-100 text-red-800 text-xs font-medium px-2 py-0.5 rounded-full">C/C++</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: YOLO model for part detection in Arduino Uno -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden flex hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-1/3 bg-blue-500 text-white p-4 flex items-center justify-center rounded-l-lg">
+                        <h3 class="text-lg font-bold text-center">YOLO Model <br> (Arduino)</h3>
+                    </div>
+                    <div class="w-2/3 p-4 bg-gray-100 rounded-r-lg">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-1">YOLO model for part detection in Arduino Uno</h4>
+                        <p class="text-gray-600 text-xs mb-2">Feb 2025</p>
+                        <p class="text-gray-700 text-sm mb-2">Built a completely new dataset for arduino part detection. Finetuned a YOLO model for the dataset with an accuracy of 95%.</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded-full">Python</span>
+                        </div>
+                        <a href="#" class="text-blue-600 hover:underline font-medium text-xs mt-2 block">GitHub Repo &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 4: TalkThruMotion -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden flex hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-1/3 bg-blue-500 text-white p-4 flex items-center justify-center rounded-l-lg">
+                        <h3 class="text-lg font-bold text-center">TalkThruMotion</h3>
+                    </div>
+                    <div class="w-2/3 p-4 bg-gray-100 rounded-r-lg">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-1">TalkThruMotion</h4>
+                        <p class="text-gray-600 text-xs mb-2">Feb 2024</p>
+                        <p class="text-gray-700 text-sm mb-2">Built a gloves for paralytic patients so that they could pass on simple messages to their care taker using simple and minimal hand gestures. The messages where like need food, need water, need to go to bathroom and emergency. These messages where sent as an sms to patient’s caretaker and the emergency message was sent to both caretaker and doctor.</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded-full">NodeMCU</span>
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-0.5 rounded-full">Accelerometer</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2 py-0.5 rounded-full">GSM module</span>
+                        </div>
+                        <a href="#" class="text-blue-600 hover:underline font-medium text-xs mt-2 block">GitHub Repo &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 5: Smart City -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden flex hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-1/3 bg-blue-500 text-white p-4 flex items-center justify-center rounded-l-lg">
+                        <h3 class="text-lg font-bold text-center">Smart City</h3>
+                    </div>
+                    <div class="w-2/3 p-4 bg-gray-100 rounded-r-lg">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-1">Smart City</h4>
+                        <p class="text-gray-600 text-xs mb-2">Feb 2025 - Present</p>
+                        <p class="text-gray-700 text-sm mb-2">Built a set of detection models for detecting accidents, violence, fire and stuff and ensembled them together.</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded-full">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 6: Fleet based Amphibious Rover for Agriculture -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden flex hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-1/3 bg-blue-500 text-white p-4 flex items-center justify-center rounded-l-lg">
+                        <h3 class="text-lg font-bold text-center">Amphibious Rover</h3>
+                    </div>
+                    <div class="w-2/3 p-4 bg-gray-100 rounded-r-lg">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-1">Fleet based Amphibious Rover for Agriculture</h4>
+                        <p class="text-gray-600 text-xs mb-2">Feb 2024</p>
+                        <p class="text-gray-700 text-sm mb-2">Built a rover for collecting remote data from agricultural fields and for removing the CV detected weeds using a robotic arm. Rover contained a fleet of mini-rovers to collect data from dense agricultural fields.</p>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded-full">NodeMCU</span>
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-0.5 rounded-full">Accelerometer</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2 py-0.5 rounded-full">GSM module</span>
+                        </div>
+                        <a href="#" class="text-blue-600 hover:underline font-medium text-xs mt-2 block">GitHub Repo &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 7: Placement Trackr -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden flex hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-1/3 bg-blue-500 text-white p-4 flex items-center justify-center rounded-l-lg">
+                        <h3 class="text-lg font-bold text-center">Placement Trackr</h3>
+                    </div>
+                    <div class="w-2/3 p-4 bg-gray-100 rounded-r-lg">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-1">Placement Trackr</h4>
+                        <p class="text-gray-600 text-xs mb-2">Web application for PTOs and students</p>
+                        <ul class="list-disc list-inside text-gray-700 text-sm mb-2 space-y-1">
+                            <li>PTOs can upload student emails and login credentials are automatically created and sent.</li>
+                            <li>PTOs can filter students based on course, skills or CGPA and notify selected students about drives.</li>
+                            <li>Students can upload resumes as PDF; OCR detects content and updates profiles automatically.</li>
+                            <li>Students can get achievements verified by uploading certificates.</li>
+                            <li>Students can track application status to various drives.</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-1">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-0.5 rounded-full">React.js</span>
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-0.5 rounded-full">HTML</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2 py-0.5 rounded-full">CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-6 md:px-12 lg:px-24 bg-gray-50 rounded-lg shadow-md mx-4 md:mx-auto max-w-4xl mt-8 mb-8">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 section-title">Get In Touch</h2>
+            <p class="text-lg text-gray-700 mb-8">Have a question or want to work together? Feel free to reach out!</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="mailto:selvaganesh.a.m@gmail.com" class="text-blue-600 hover:text-blue-800 transition-colors">
+                    <svg class="w-8 h-8 inline-block mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                    Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/selvaganesh-a-m/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition-colors">
+                    <svg class="w-8 h-8 inline-block mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.047-1.852-3.047-1.853 0-2.136 1.445-2.136 2.955v5.658H9.553V9.249h3.413v1.56c.493-.889 1.63-1.823 3.373-1.823 3.614 0 4.28 2.376 4.28 6.867v7.01h-.002zM5.419 7.931c-1.141 0-2.067-.926-2.067-2.067 0-1.139.926-2.066 2.067-2.066 1.141 0 2.066.926 2.066 2.066 0 1.141-.925 2.067-2.066 2.067zm1.785 12.521H3.634V9.249h3.57V20.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454C23.207 24 24 23.227 24 22.271V1.729C24 .774 23.207 0 22.225 0z"></path></svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/Ams2123" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition-colors">
+                    <svg class="w-8 h-8 inline-block mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.799 8.205 11.385.6.11.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.73.083-.73 1.205.085 1.838 1.238 1.838 1.238 1.07 1.833 2.809 1.304 3.492.997.108-.775.418-1.304.762-1.604-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.382 1.235-3.22-.125-.3-.535-1.52.117-3.176 0 0 1-.32 3.3-.123 1.05-.29 2.16-.435 3.27-.435 1.11 0 2.22.145 3.27.435 2.298-.197 3.298.123 3.298.123.652 1.656.24 2.876.118 3.176.77.838 1.235 1.91 1.235 3.22 0 4.61-2.805 5.625-5.475 5.92.43.37.81 1.096.81 2.22 0 1.606-.015 2.89-.015 3.286 0 .32.21.69.825.575C20.565 21.796 24 17.302 24 12c0-6.627-5.373-12-12-12z" clip-rule="evenodd"></path></svg>
+                    GitHub
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; 2025 Your Name. All rights reserved.</p>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillsData = [
+                // Programming Languages
+                { name: 'Python', domain: 'programming_languages' },
+                { name: 'C', domain: 'programming_languages' },
+                { name: 'C++', domain: 'programming_languages' },
+                { name: 'Java', domain: 'programming_languages' },
+                { name: 'Kotlin', domain: 'programming_languages' },
+                { name: 'JavaScript', domain: 'programming_languages' },
+                { name: 'React', domain: 'programming_languages' },
+
+                // ML & Data Science
+                { name: 'Supervised Learning', domain: 'ml_data_science' },
+                { name: 'Unsupervised Learning', domain: 'ml_data_science' },
+                { name: 'Deep Learning (CNN)', domain: 'ml_data_science' },
+                { name: 'Deep Learning (YOLO)', domain: 'ml_data_science' },
+                { name: 'Deep Learning (UNet)', domain: 'ml_data_science' },
+                { name: 'Deep Learning (RNN)', domain: 'ml_data_science' },
+                { name: 'Deep Learning (Transformers)', domain: 'ml_data_science' },
+                { name: 'NLP', domain: 'ml_data_science' },
+                { name: 'Feature Engineering', domain: 'ml_data_science' },
+                { name: 'Model Evaluation', domain: 'ml_data_science' },
+                { name: 'Model Deployment', domain: 'ml_data_science' },
+
+                // Embedded Systems
+                { name: 'Arduino', domain: 'embedded_systems' },
+                { name: 'Raspberry PI', domain: 'embedded_systems' },
+                { name: 'ESP32', domain: 'embedded_systems' },
+
+                // Frameworks
+                { name: 'Git', domain: 'frameworks' },
+                { name: 'PyTorch', domain: 'frameworks' },
+                { name: 'TensorFlow', domain: 'frameworks' },
+                { name: 'Scikit-learn', domain: 'frameworks' },
+                { name: 'Streamlit', domain: 'frameworks' },
+                { name: 'Flask', domain: 'frameworks' },
+                { name: 'FastAPI', domain: 'frameworks' },
+
+                // Design and Simulation Tools
+                { name: 'AutoCAD', domain: 'design_simulation' },
+                { name: 'Solidworks', domain: 'design_simulation' },
+                { name: 'Tableau', domain: 'design_simulation' },
+                { name: 'Matlab', domain: 'design_simulation' },
+                { name: 'LTSplice', domain: 'design_simulation' },
+                { name: 'TinkerCAD', domain: 'design_simulation' },
+
+                // Operating Systems
+                { name: 'Linux', domain: 'operating_systems' },
+                { name: 'Windows', domain: 'operating_systems' },
+                { name: 'Mac', domain: 'operating_systems' },
+
+                // Soft Skills
+                { name: 'Leadership', domain: 'soft_skills' },
+                { name: 'Excellent Communication', domain: 'soft_skills' },
+                { name: 'Adaptable', domain: 'soft_skills' },
+                { name: 'Problem-Solving', domain: 'soft_skills' },
+                { name: 'Teamwork', domain: 'soft_skills' },
+                { name: 'Time Management', domain: 'soft_skills' },
+
+                // Languages Known
+                { name: 'English', domain: 'languages_known' },
+                { name: 'Tamil', domain: 'languages_known' }
+            ];
+
+            const skillsDisplay = document.getElementById('skills-display');
+            const skillDomainSelect = document.getElementById('skill-domain');
+
+            // Map domain keys to display names
+            const domainDisplayNames = {
+                'programming_languages': 'Programming Languages',
+                'ml_data_science': 'ML & Data Science',
+                'embedded_systems': 'Embedded Systems',
+                'frameworks': 'Frameworks',
+                'design_simulation': 'Design and Simulation Tools',
+                'operating_systems': 'Operating Systems',
+                'soft_skills': 'Soft Skills',
+                'languages_known': 'Languages Known'
+            };
+
+            // Function to render skills in a nested card manner
+            function renderSkills(selectedDomain) {
+                skillsDisplay.innerHTML = ''; // Clear existing skills
+
+                let domainsToDisplay = [];
+                if (selectedDomain === 'all') {
+                    // Get all unique domains from skillsData
+                    domainsToDisplay = [...new Set(skillsData.map(skill => skill.domain))];
+                } else {
+                    domainsToDisplay = [selectedDomain];
+                }
+
+                if (domainsToDisplay.length === 0) {
+                    skillsDisplay.innerHTML = '<p class="text-center text-gray-600 col-span-full">No skills found for this domain.</p>';
+                    return;
+                }
+
+                domainsToDisplay.forEach(domain => {
+                    const skillsInDomain = skillsData.filter(skill => skill.domain === domain);
+
+                    if (skillsInDomain.length > 0) {
+                        const domainCard = document.createElement('div');
+                        domainCard.className = 'bg-white p-6 rounded-lg shadow-md';
+
+                        const domainTitle = document.createElement('h3');
+                        domainTitle.className = 'text-2xl font-semibold text-gray-800 mb-4 border-b-2 border-blue-300 pb-2';
+                        domainTitle.textContent = domainDisplayNames[domain] || domain.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase()); // Capitalize and replace underscores
+                        domainCard.appendChild(domainTitle);
+
+                        const skillsGrid = document.createElement('div');
+                        skillsGrid.className = 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4';
+
+                        skillsInDomain.forEach(skill => {
+                            const skillItem = `
+                                <div class="bg-gray-100 p-3 rounded-md text-center text-gray-700 font-medium text-sm shadow-sm hover:bg-gray-200 transition-colors">
+                                    ${skill.name}
+                                </div>
+                            `;
+                            skillsGrid.innerHTML += skillItem;
+                        });
+                        domainCard.appendChild(skillsGrid);
+                        skillsDisplay.appendChild(domainCard);
+                    }
+                });
+            }
+
+            // Event Listener for dropdown change
+            skillDomainSelect.addEventListener('change', function() {
+                renderSkills(this.value);
+            });
+
+            // Initial render on page load
+            renderSkills(skillDomainSelect.value);
+        });
+    </script>
+</body>
+</html>
